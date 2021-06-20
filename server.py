@@ -10,7 +10,7 @@ def process_image():
     file = request.files['image']
     img = Image.open(file.stream)
     text = tess.image_to_string(img, lang='deu')
-    return print(text)
+    return text
     
 @app.route('/')
 def index():
