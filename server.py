@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from PIL import Image
-import pytesseract as tess
+#import pytesseract as tess
 #tess.pytesseract.tesseract_cmd = '/.apt/usr/bin/tesseract'
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def process_image():
     if request.method == 'POST':
         file = request.files['image']
         img = Image.open(file.stream)
-        text = tess.image_to_string(img, lang='deu')
+        text = pytesseract.image_to_string(img, lang='deu')
  
         return jsonify(text)
 
