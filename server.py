@@ -12,7 +12,9 @@ def process_image():
     text = tess.image_to_string(img, lang='deu')
     return jsonify(text), print(text)
     
-
+@app.route('/')
+def index():
+    return "Hello World" 
 
 if __name__ == "__main__":
     app.run(debug=True)
