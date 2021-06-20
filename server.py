@@ -5,7 +5,7 @@ tess.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 app = Flask(__name__)
 
-@app.route("/imgt", methods=["POST"])
+@app.route("/imgt", methods=["POST", "GET"])
 def process_image():
     file = request.files['image']
     img = Image.open(file.stream)
