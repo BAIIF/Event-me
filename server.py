@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
 from PIL import Image
 import pytesseract as tess
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 app = Flask(__name__)
-text = "a"
+text = "b"
 @app.route("/imgt", methods=["POST", "GET"])
 
 
