@@ -3,7 +3,7 @@ from PIL import Image
 import pytesseract as tess
 
 app = Flask(__name__)
-text = "b"
+text = "a"
 @app.route("/imgt", methods=["POST", "GET"])
 
 
