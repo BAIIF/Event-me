@@ -1,1 +1,1 @@
-web: gunicorn server:app
+Placeholder for the json key needed for Google Cloud authentification. Not included for security reasons.
